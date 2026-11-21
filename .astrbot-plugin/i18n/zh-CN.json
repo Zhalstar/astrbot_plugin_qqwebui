@@ -1,0 +1,229 @@
+{
+  "metadata": {
+    "display_name": "QQ面板",
+    "desc": "精心打造的网页版 QQ 插件，支持在 AstrBot 面板上与 QQ 群聊、私聊进行交互"
+  },
+  "pages": {
+    "dashboard": {
+      "title": "QQ面板",
+      "description": "查看最近会话、联系人、群成员并在面板内收发 QQ 消息。",
+      "actions": {
+        "show_sessions": "显示最近会话",
+        "show_contacts": "显示联系人",
+        "more_chat_actions": "更多会话操作",
+        "upload_attachment": "上传附件",
+        "emoji": "表情",
+        "poke": "戳一戳",
+        "close_media_preview": "关闭媒体预览",
+        "close_quote_viewer": "关闭转发查看器"
+      },
+      "left_tabs": {
+        "sessions": "会话",
+        "friends": "好友",
+        "groups": "群聊"
+      },
+      "sessions": {
+        "title": "最近会话",
+        "search_placeholder": "群名 / QQ",
+        "empty": "暂无 QQ 消息流量。请先发送或接收一条消息。",
+        "no_preview": "暂无预览"
+      },
+      "contacts": {
+        "title": "联系人",
+        "search_placeholder": "好友 / 群聊 / QQ",
+        "search_friends_placeholder": "好友 / QQ",
+        "search_groups_placeholder": "群聊 / QQ",
+        "empty": "刷新后会显示联系人。",
+        "types": {
+          "group": "群聊",
+          "private": "私聊"
+        }
+      },
+      "composer": {
+        "placeholder": "向当前会话发送消息",
+        "send": "发送",
+        "mention_all": "全体",
+        "mention_all_hint": "At 全体成员",
+        "replying_to": "正在回复",
+        "cancel_reply": "取消回复",
+        "face_title": "QQ 表情",
+        "face_loading": "正在加载表情...",
+        "face_empty": "暂无可用表情。",
+        "face_load_failed": "加载表情失败。"
+      },
+      "members": {
+        "panel_title": "群成员",
+        "open_group": "打开一个群会话后即可查看成员缓存。",
+        "empty": "暂无已加载的群成员。",
+        "item_meta": "{role} - QQ {id}",
+        "roles": {
+          "owner": "群主",
+          "admin": "管理员",
+          "member": "成员"
+        }
+      },
+      "profile": {
+        "title": "用户资料",
+        "friend": "好友",
+        "close": "关闭",
+        "refresh": "刷新",
+        "refreshing": "刷新中...",
+        "loading": "正在加载缓存资料...",
+        "empty": "刷新后将在这里显示资料详情。",
+        "load_failed": "加载缓存资料失败。",
+        "refresh_failed": "刷新资料失败。",
+        "sections": {
+          "basic": "基础资料",
+          "qq": "QQ资料",
+          "group": "群资料"
+        },
+        "boolean": {
+          "yes": "是",
+          "no": "否"
+        },
+        "roles": {
+          "owner": "群主",
+          "admin": "管理员",
+          "member": "成员"
+        },
+        "sex": {
+          "male": "男",
+          "female": "女",
+          "unknown": "未知"
+        },
+        "fields": {
+          "display_name": "显示名",
+          "nickname": "昵称",
+          "remark": "备注",
+          "group_card": "群名片",
+          "qid": "QID",
+          "sex": "性别",
+          "age": "年龄",
+          "area": "地区",
+          "birthday": "生日",
+          "user_id": "QQ号",
+          "uid": "UID",
+          "qqLevel": "QQ等级",
+          "long_nick": "个性签名",
+          "reg_time": "注册时间",
+          "is_vip": "VIP",
+          "is_years_vip": "年费VIP",
+          "vip_level": "VIP等级",
+          "status": "状态",
+          "login_days": "登录天数",
+          "birthday_year": "出生年",
+          "birthday_month": "出生月",
+          "birthday_day": "出生日",
+          "kBloodType": "血型",
+          "phoneNum": "电话",
+          "eMail": "邮箱",
+          "homeTown": "家乡",
+          "country": "国家",
+          "province": "省份",
+          "city": "城市",
+          "address": "地址",
+          "makeFriendCareer": "职业",
+          "labels": "标签",
+          "group_id": "群号",
+          "card": "名片",
+          "join_time": "入群时间",
+          "last_sent_time": "最后发言",
+          "level": "等级",
+          "role": "角色",
+          "unfriendly": "风险账号",
+          "is_robot": "机器人账号",
+          "title": "头衔",
+          "title_expire_time": "头衔到期",
+          "card_changeable": "可改名片"
+        }
+      },
+      "messages": {
+        "select_session": "请先从左侧选择一个会话。",
+        "empty_session": "当前会话暂无缓存消息。",
+        "reply": "回复",
+        "reply_jump": "跳转到消息",
+        "recall": "撤回",
+        "unknown_user": "未知用户",
+        "empty_message": "[空消息]",
+        "sending": "发送中...",
+        "send_timeout": "发送超时，投递状态未知。",
+        "send_failed": "发送失败。",
+        "retry_send": "点击重发。"
+      },
+      "notices": {
+        "generic": "收到通知：{type}",
+        "duration_separator": "",
+        "duration_days": "{count}天",
+        "duration_hours": "{count}小时",
+        "duration_minutes": "{count}分钟",
+        "duration_seconds": "{count}秒",
+        "group_upload": "{user} 上传了文件 {file}",
+        "group_admin_set": "{user} 被设为管理员",
+        "group_admin_unset": "{user} 被取消管理员",
+        "group_decrease_leave": "{user} 退出了群聊",
+        "group_decrease_kick": "{user} 被 {operator} 移出群聊",
+        "group_decrease_kick_me": "机器人被 {operator} 移出群聊",
+        "group_increase_approve": "{user} 加入了群聊",
+        "group_increase_invite": "{user} 受 {operator} 邀请加入群聊",
+        "group_ban_ban": "{user} 被 {operator} 禁言 {duration}",
+        "group_ban_lift": "{user} 被 {operator} 解除禁言",
+        "friend_add": "{user} 已添加为好友",
+        "group_recall": "{operator} 撤回了 {user} 的消息",
+        "group_self_recall": "{user} 撤回了一条消息",
+        "friend_recall": "{user} 撤回了一条消息",
+        "self_recall": "你撤回了一条消息，",
+        "reedit": "重新编辑",
+        "notify_poke": "{user} 戳了戳 {target}",
+        "notify_lucky_king": "{target} 成为 {user} 红包的运气王",
+        "notify_honor_talkative": "{user} 获得龙王标识",
+        "notify_honor_performer": "{user} 获得群聊之火标识",
+        "notify_honor_emotion": "{user} 获得快乐源泉标识",
+        "notify_honor_generic": "{user} 获得群荣誉"
+      },
+      "forward": {
+        "modal_title": "转发消息",
+        "modal_meta": "{count} 条消息",
+        "card_title": "聊天记录",
+        "card_footer": "消息",
+        "record_fallback": "转发消息"
+      },
+      "attachments": {
+        "image": "图片",
+        "video": "视频",
+        "audio": "音频",
+        "file": "文件",
+        "image_alt": "图片",
+        "qq_face_alt": "[QQ 表情]"
+      },
+      "status": {
+        "not_connected": "未连接",
+        "waiting_adapter": "等待 aiocqhttp 连接",
+        "quote_not_loaded": "引用消息不在当前已加载的消息窗口中。",
+        "message_sent": "消息已发送",
+        "message_recalled": "消息已撤回。",
+        "message_recall_failed": "撤回消息失败。",
+        "message_restored": "已恢复到输入区。",
+        "message_restore_failed": "无法恢复这条消息。",
+        "send_failed": "发送失败。",
+        "retry_failed": "无法重发这条消息。",
+        "retrying_send": "正在重发...",
+        "poke_failed": "发送戳一戳失败。",
+        "paste_ignored_large": "已忽略超过 15 MB 的粘贴附件。",
+        "pasted_one": "已粘贴附件：{name}",
+        "pasted_many": "已粘贴 {count} 个附件",
+        "attachment_paste_failed": "粘贴附件失败。",
+        "upload_ignored_large": "已忽略超过 15 MB 的附件。",
+        "selected_one": "已选择附件：{name}",
+        "selected_many": "已选择 {count} 个附件",
+        "attachment_upload_failed": "上传附件失败。",
+        "polling_failed": "轮询失败。",
+        "initialization_failed": "初始化失败。"
+      },
+      "errors": {
+        "timeout": "AstrBot WebUI 请求超时。",
+        "request_failed": "请求失败。",
+        "upload_failed": "上传失败。"
+      }
+    }
+  }
+}
