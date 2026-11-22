@@ -363,9 +363,7 @@ class SessionService:
             child_path = f"{path}.{index}"
             inline_nodes = self._inline_forward_nodes_from_segment(segment)
             if inline_nodes:
-                forward_id = str(
-                    data.get("id") or data.get("message_id") or ""
-                ).strip()
+                forward_id = str(data.get("id") or data.get("message_id") or "").strip()
                 if not forward_id:
                     forward_id = f"{parent_forward_id}:inline:{child_path}"
                 nested_records = await self._normalize_forward_nodes(
@@ -726,7 +724,7 @@ class SessionService:
         )
 
     async def normalize_message_media_urls(self, message: EventRecord) -> None:
-        """Replace cached media URLs in the background.
+        """Populate token URLs for cached local media in the background.
 
         Args:
             message: Message record whose media segments should be normalized.
@@ -751,10 +749,10 @@ class SessionService:
                     if seg_type not in {"image", "record", "video", "file"}:
                         continue
                     existing_url = str(data.get("url", "")).strip()
-                    if existing_url.startswith("/api/v1/files/tokens/"):
+                    if existing_url:
                         continue
-                    source = existing_url or str(data.get("file", "")).strip()
-                    if not source:
+                    source = str(data.get("file", "")).strip()
+                    if not source or source.startswith(("http://", "https://")):
                         continue
                     data["url"] = await self.files.build_token_url(source, seg_type)
 

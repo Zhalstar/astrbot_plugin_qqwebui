@@ -1,25 +1,25 @@
 {
   "session_message_limit": {
-    "description": "Recent message cache size per QQ session",
-    "hint": "Recommended 100-500 for the first validation build.",
+    "description": "会话消息缓存数",
+    "hint": "建议设置为 100-500。数值越大，占用的内存和存储空间越多。",
     "type": "int",
     "default": 200
   },
   "contact_ttl": {
-    "description": "Friend and group metadata cache TTL in seconds",
-    "hint": "Used to avoid repeated OneBot refresh calls.",
+    "description": "联系人缓存时长（秒）",
+    "hint": "有效期内不会重复通过 OneBot 刷新资料。",
     "type": "int",
     "default": 300
   },
   "group_member_ttl": {
-    "description": "Group member cache TTL in seconds",
-    "hint": "Lower values refresh faster but cost more OneBot calls.",
+    "description": "群成员缓存时长（秒）",
+    "hint": "数值越小，资料刷新越及时，但会产生更多 OneBot 请求。",
     "type": "int",
     "default": 120
   },
   "max_media_size": {
-    "description": "Maximum uploaded media size in bytes",
-    "hint": "Default is 15 MB. Increase carefully to avoid memory and storage pressure.",
+    "description": "单文件上传上限（字节）",
+    "hint": "默认上限为 15 MB。提高上限会增加内存和存储压力。",
     "type": "int",
     "default": 15728640
   }

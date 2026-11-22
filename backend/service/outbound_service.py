@@ -23,12 +23,12 @@ class OutboundService:
         messages: list[dict[str, Any]],
     ) -> None:
         is_group = message_type == "group"
-        await self.bot.send_msg(
-            message_type=message_type,
-            user_id=int(target_id) if not is_group else None,
-            group_id=int(target_id) if is_group else None,
-            message=messages,
-        )
+        params: dict[str, Any] = {
+            "message_type": message_type,
+            "message": messages,
+            "group_id" if is_group else "user_id": int(target_id),
+        }
+        await self.bot.send_msg(**params)
 
     async def _forward(
         self,
@@ -37,12 +37,12 @@ class OutboundService:
         messages: list[dict[str, Any]],
     ) -> None:
         is_group = message_type == "group"
-        await self.bot.send_forward_msg(
-            message_type=message_type,
-            user_id=int(target_id) if not is_group else None,
-            group_id=int(target_id) if is_group else None,
-            messages=messages,
-        )
+        params: dict[str, Any] = {
+            "message_type": message_type,
+            "messages": messages,
+            "group_id" if is_group else "user_id": int(target_id),
+        }
+        await self.bot.send_forward_msg(**params)
 
     async def send_message(
         self,

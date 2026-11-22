@@ -129,7 +129,7 @@ class SelfCaptureService:
                 if str(data.get("url", "")).strip():
                     continue
                 source = str(data.get("file", "")).strip()
-                if not source:
+                if not source or source.startswith(("http://", "https://")):
                     continue
                 data["url"] = await self.files.build_token_url(source, seg_type)
         return message

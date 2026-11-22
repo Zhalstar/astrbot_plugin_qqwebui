@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+from copy import deepcopy
 from dataclasses import dataclass, field
 from typing import Any
 
@@ -48,9 +49,6 @@ class OnebotEvent:
             return None
 
         if post_type == "message":
-            if str(payload.get("message_format", "")).strip().lower() != "array":
-                return None
-
             raw_segments = payload.get("message")
             if not isinstance(raw_segments, list):
                 return None
@@ -65,7 +63,9 @@ class OnebotEvent:
                 message_type=str(payload.get("message_type", "")),
                 sub_type=str(payload.get("sub_type", "")),
                 raw_message=str(payload.get("raw_message", "")),
-                message=[dict(item) for item in raw_segments if isinstance(item, dict)],
+                message=deepcopy(
+                    [item for item in raw_segments if isinstance(item, dict)]
+                ),
                 sender=(
                     Sender.from_dict(sender)
                     if isinstance(sender, dict)
