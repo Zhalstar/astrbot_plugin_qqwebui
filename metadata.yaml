@@ -2,7 +2,7 @@ name: astrbot_plugin_qqwebui
 display_name: QQ面板
 desc: 第三方 QQ 客户端,支持在 Astrbot 面板上体验 QQ 的大部分功能
 help: 略
-version: v1.1.0
+version: v1.1.1
 author: 饰乐
 repo: https://github.com/Zhalstar/astrbot_plugin_qqwebui
 support_platforms:
